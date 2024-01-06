@@ -6,6 +6,7 @@ import Root from './components/root';
 
 // Add react-router-dom imports
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
+import Pet from './components/pet';
 // create router with JSX Route elements
 const appRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const appRouter = createBrowserRouter(
     <Route path=":type" element={<HomePage />}/>
     <Route path=":type/:id" element={<PetDetailsPage />}/>
     <Route path="/search" element={<SearchPage />}/>
+    <Route path="/pet-details-not-found" element={<PetDetailsNotFound />} />
   </Route>
   ));
 
